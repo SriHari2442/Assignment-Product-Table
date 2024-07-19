@@ -1,0 +1,48 @@
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f4f4f4;
+  }
+
+  h1{
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .page-item {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .page-link:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .table th, .table td {
+      padding: 8px;
+    }
+  
+    .page-link {
+      padding: 4px 8px;
+    }
+  }
+  

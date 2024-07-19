@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductById } from '../features/productsSlice';
 import { useParams } from 'react-router-dom';
+import styles from './ProductDetail.module.css';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
@@ -15,12 +16,12 @@ const ProductDetail = () => {
   if (loading) return <h2>Loading...</h2>;
 
   return (
-    <div>
+    <div className={`container ${styles.productDetail}`}>
       {product && (
         <div>
-          <h1>{product.title}</h1>
-          <p>{product.description}</p>
-          <p>Price: {product.price}</p>
+          <h1 className={styles.productTitle}>{product.title}</h1>
+          <p className={styles.productDescription}>{product.description}</p>
+          <p className={styles.productPrice}>Price: {product.price}</p>
         </div>
       )}
     </div>

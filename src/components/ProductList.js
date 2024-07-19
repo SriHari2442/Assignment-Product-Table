@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../features/productsSlice';
 import Pagination from './Pagination';
 import { Link } from 'react-router-dom';
+import styles from './ProductList.module.css';
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -23,8 +24,9 @@ const ProductList = () => {
   if (loading) return <h2>Loading...</h2>;
 
   return (
-    <div>
-      <table>
+    <div className="container">
+        <h1>Product Data Table </h1>
+      <table className={`table ${styles.table}`}>
         <thead>
           <tr>
             <th>ID</th>

@@ -13,10 +13,16 @@ const ProductDetail = () => {
     dispatch(getProductById(id));
   }, [dispatch, id]);
 
-  if (loading) return <h2>Loading...</h2>;
+  if (loading) {
+    return (
+      <div className={styles.loadingContainer}>
+        <h2 className={styles.loadingMessage}>Loading...</h2>
+      </div>
+    );
+  }
 
   return (
-    <div className={`container ${styles.productDetail}`}>
+    <div className={styles.productDetail}>
       {product && (
         <div>
           <h1 className={styles.productTitle}>{product.title}</h1>

@@ -10,8 +10,9 @@
   }
   
   .table th {
-    background-color: #f4f4f4;
+    background-color: blue !important;
   }
+
 
   h1{
     font-size: 20px;
@@ -19,7 +20,7 @@
     margin: auto;
   }
   
-  .page-item {
+  /* .page-item {
     display: inline-block;
     margin: 0 5px;
   }
@@ -29,19 +30,75 @@
     background-color: #007bff;
     color: #fff;
     border-radius: 4px;
-    text-decoration: none;
+    text-decoration: overline !important;
   }
   
   .page-link:hover {
-    background-color: #0056b3;
+    background-color: black !important;
+  } */
+
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
-  @media (max-width: 768px) {
+  .loadingMessage {
+    font-size: 2em;
+    color: #333;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+  /* @media screen and (max-width: 768px) {
     .table th, .table td {
       padding: 8px;
     }
   
     .page-link {
+      padding: 4px 8px;
+    }
+  } */
+  
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .pageItem {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .pageLink {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .pageLink:hover {
+    background-color: black !important;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .table th, .table td {
+      padding: 8px;
+    }
+  
+    .pageLink {
       padding: 4px 8px;
     }
   }
